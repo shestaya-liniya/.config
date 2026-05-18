@@ -1,0 +1,6 @@
+require("options")
+require("custom_colors")
+require("automations")
+require("shortcuts")
+require("scripts")
+require("lazy.init")
