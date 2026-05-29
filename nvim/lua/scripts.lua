@@ -34,7 +34,7 @@ vim.api.nvim_create_user_command("Gtp", function(opts)
 	local dir = vim.fn.fnameescape(opts.args)
 
 	vim.cmd("cd " .. dir)
-	vim.cmd("Explore " .. dir)
+	vim.cmd("Ex" .. dir)
 end, {
 	nargs = 1,
 	complete = function()

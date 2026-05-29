@@ -8,7 +8,6 @@ opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
-
 opt.smartindent = true
 opt.wrap = false
 
@@ -17,3 +16,5 @@ opt.guicursor = "a:block"
 opt.numberwidth = 1
 
 opt.undofile = true
+
+vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"
