@@ -3,3 +3,5 @@ vim.api.nvim_set_hl(0, "StatusLine", {
 	bg = "#005f87",
 	bold = false,
 })
+
+vim.api.nvim_set_hl(0, "Comment", { link = "String" })

@@ -16,5 +16,4 @@ opt.guicursor = "a:block"
 opt.numberwidth = 1
 
 opt.undofile = true
-
 vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"
