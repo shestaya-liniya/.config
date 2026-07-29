@@ -17,3 +17,4 @@ opt.numberwidth = 1
 
 opt.undofile = true
 vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"
+vim.o.statusline = "%{fnamemodify(getcwd(), ':t')} %f"
