@@ -2,7 +2,7 @@ local opt = vim.opt
 
 opt.relativenumber = true
 opt.number = true
-opt.termguicolors = false
+opt.termguicolors = true
 
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -17,4 +17,4 @@ opt.numberwidth = 1
 
 opt.undofile = true
 vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"
-vim.o.statusline = "%{fnamemodify(getcwd(), ':t')} %f"
+--vim.o.statusline = "%{fnamemodify(getcwd(), ':t')} %f %m"
