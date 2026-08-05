@@ -1,6 +1,6 @@
 require("options")
-require("custom_colors")
 require("automations")
 require("remaps")
 require("scripts")
+require("cursor").setup()
 require("lazy.init")
