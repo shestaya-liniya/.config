@@ -6,4 +6,9 @@ return {
 		-- optional but recommended
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
+	config = function()
+		require("telescope.builtin").find_files({
+			hidden = false,
+		})
+	end,
 }
