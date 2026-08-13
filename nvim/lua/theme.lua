@@ -132,10 +132,10 @@ function M.setup()
 	hi("DiagnosticInfo", { fg = c.aqua })
 	hi("DiagnosticHint", { fg = c.aqua })
 
-	hi("DiagnosticUnderlineError", { undercurl = true, sp = c.red })
-	hi("DiagnosticUnderlineWarn", { undercurl = true, sp = c.yellow })
-	hi("DiagnosticUnderlineInfo", { undercurl = true, sp = c.aqua })
-	hi("DiagnosticUnderlineHint", { undercurl = true, sp = c.aqua })
+	hi("DiagnosticUnderlineError", { underline = true, sp = c.red })
+	hi("DiagnosticUnderlineWarn", { underline = true, sp = c.yellow })
+	hi("DiagnosticUnderlineInfo", { underline = true, sp = c.aqua })
+	hi("DiagnosticUnderlineHint", { underline = true, sp = c.aqua })
 
 	------------------------------------------------------------------
 	-- Git

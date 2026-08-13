@@ -50,3 +50,7 @@ end)
 vim.keymap.set("n", "<leader>fb", function()
 	vim.cmd("Telescope buffers")
 end)
+
+vim.keymap.set("n", "<F2>", "<cmd>UndotreeToggle<CR>", {
+	desc = "Toggle UndoTree",
+})
