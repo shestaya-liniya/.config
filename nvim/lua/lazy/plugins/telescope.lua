@@ -7,8 +7,12 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	config = function()
-		require("telescope.builtin").find_files({
-			hidden = false,
+		require("telescope").setup({
+			pickers = {
+				find_files = {
+					hidden = true,
+				},
+			},
 		})
 	end,
 }
