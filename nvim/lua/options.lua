@@ -9,6 +9,10 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.smartindent = true
 opt.wrap = false
+opt.list = true
+vim.opt.listchars = {
+	tab = "| ",
+}
 
 opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
 opt.guicursor = "a:block"
