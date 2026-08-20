@@ -8,9 +8,16 @@ return {
 	},
 	config = function()
 		require("telescope").setup({
+			defaults = {
+				file_ignore_patterns = {
+					"Library/",
+					".git/"
+				},
+			},
 			pickers = {
 				find_files = {
 					hidden = true,
+					no_ignore = true,
 				},
 			},
 		})

@@ -12,6 +12,7 @@ opt.wrap = false
 opt.list = true
 vim.opt.listchars = {
 	tab = "| ",
+	space = "·"
 }
 
 opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
@@ -20,7 +21,6 @@ opt.numberwidth = 1
 
 opt.undofile = true
 vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"
---vim.o.statusline = "%{fnamemodify(getcwd(), ':t')} %f %m"
 
 vim.diagnostic.config({
 	virtual_text = {
@@ -28,3 +28,5 @@ vim.diagnostic.config({
 	},
 	underline = true,
 })
+
+vim.cmd.packadd("nohlsearch")
