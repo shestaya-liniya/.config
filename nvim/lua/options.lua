@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+vim.cmd.colorscheme("retrobox")
+
 opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true
@@ -14,6 +16,9 @@ vim.opt.listchars = {
 	tab = "| ",
 	space = "·"
 }
+vim.api.nvim_set_hl(0, "Normal", {
+    bg = "#303030",
+})
 
 opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
 opt.guicursor = "a:block"

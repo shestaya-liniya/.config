@@ -3,7 +3,7 @@ return {
 	opts = {},
 	config = function()
 		require("nvim-web-devicons").setup({
-			color_icons = true,
+			color_icons = false,
 		})
 	end,
 }
