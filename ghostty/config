@@ -1,9 +1,9 @@
-theme = Dracula+
-background = 1A1A1A
+theme = Gruvbox Material
+background = 303030
 
 window-decoration = none
-window-padding-x = 20
-window-padding-y = 20
+window-padding-x = 12
+window-padding-y = 12
 mouse-hide-while-typing = true
 
 font-size = 12
