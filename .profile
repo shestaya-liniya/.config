@@ -8,6 +8,12 @@ fi
 
 # user@system:~/user/working/directory
 # $
-PS1="\e[0;32m\u@\h\e[m:\w\n$ "
+# PS1="\e[0;32m\u@\h\e[m:\w\n$ "
+
+# default
+# PS1="\h:\W \u\$"
+
+# ~/user/working/directory $
+PS1="\W \e[0;32m\$ \e[m"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
