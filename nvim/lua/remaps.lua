@@ -11,28 +11,6 @@ vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
 -- exit insert mode on esc in terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { silent = true })
 
--- save and run file on space+e
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "python", "sh" },
-	callback = function()
-		vim.keymap.set("n", "<leader>e", function()
-			vim.cmd("write")
-
-			local file = vim.fn.expand("%")
-			local ft = vim.bo.filetype
-
-			if ft == "python" then
-				vim.cmd("terminal python3 " .. vim.fn.fnameescape(file))
-			elseif ft == "sh" then
-				vim.cmd("terminal bash " .. vim.fn.fnameescape(file))
-			end
-		end, {
-			buffer = true,
-			desc = "Save and run file",
-		})
-	end,
-})
-
 vim.keymap.set("n", "<leader>d", function()
 	vim.diagnostic.open_float(0, { scope = "cursor" })
 end)
@@ -54,3 +32,7 @@ end)
 vim.keymap.set("n", "<F2>", "<cmd>UndotreeToggle<CR>", {
 	desc = "Toggle UndoTree",
 })
+
+vim.keymap.set("n", "<leader>l", function()
+	vim.lsp.buf.format({ bufnr = 0 })
+end, { desc = "Lint" })
