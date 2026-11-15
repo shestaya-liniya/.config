@@ -11,7 +11,8 @@ return {
 			defaults = {
 				file_ignore_patterns = {
 					"Library/",
-					".git/"
+					".git/",
+					"node_modules/"
 				},
 			},
 			pickers = {

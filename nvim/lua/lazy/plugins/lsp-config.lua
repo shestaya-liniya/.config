@@ -11,7 +11,7 @@ return {
 			}
 		})
 
-		vim.lsp.enable({ "tsc", "pyright", "bashls", "lua_ls" })
+		vim.lsp.enable({ "tsc", "pyright", "bashls", "lua_ls", "cssls" })
 
 		vim.api.nvim_create_autocmd('LspAttach', {
 			group = vim.api.nvim_create_augroup('my.lsp', {}),
