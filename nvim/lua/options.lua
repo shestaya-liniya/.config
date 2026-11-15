@@ -14,10 +14,12 @@ opt.wrap = false
 opt.list = true
 vim.opt.listchars = {
 	tab = "| ",
-	space = "·"
+	leadmultispace = "| ",
+	space = "·",
 }
+
 vim.api.nvim_set_hl(0, "Normal", {
-    bg = "#303030",
+	bg = "#303030",
 })
 
 opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
