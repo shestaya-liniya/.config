@@ -27,3 +27,8 @@ alias gt='git tag'
 alias gu='git pull' # gu = git update
 
 alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/appletviewer"
+
+PATH="${PATH}:/opt/homebrew/bin"
+export PATH
+
+export MANPATH="/opt/homebrew/share/man:${MANPATH}"
