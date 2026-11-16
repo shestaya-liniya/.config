@@ -1,4 +1,5 @@
 alias ls='ls -Ga'
+alias code='codium'
 
 # Colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;31m'
