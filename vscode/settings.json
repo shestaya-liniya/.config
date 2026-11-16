@@ -131,5 +131,6 @@
     "workbench.tree.enableStickyScroll": false,
     "workbench.tree.indent": 16,
     "workbench.activityBar.location": "bottom",
-    "workbench.activityBar.compact": true
+    "workbench.activityBar.compact": true,
+    "git.autofetch": true
 }
