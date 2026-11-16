@@ -1,0 +1,76 @@
+{
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.stickyScroll.enabled": false,
+    "editor.formatOnPaste": true,
+    "editor.autoIndentOnPaste": true,
+    "files.trimTrailingWhitespace": true,
+
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.modernUIFrostedGlass": false,
+    "workbench.experimental.modernUI": false,
+    "workbench.enableExperiments": false,
+    "workbench.browser.showInTitleBar": false,
+    "workbench.tips.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.indent": 16,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.activityBar.location": "bottom",
+
+    "window.commandCenter": false,
+    "window.density.editorTabHeight": "compact",
+    "window.density.layout": "compact",
+    "window.title": "${rootPath}",
+    "workbench.startupEditor": "none",
+    "chat.titleBar.signIn.enabled": false,
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "solid",
+    "terminal.integrated.initialHint": false,
+    "editor.minimap.enabled": false,
+    "chat.disableAIFeatures": true,
+    "editor.renderWhitespace": "trailing",
+    "files.autoSave": "onFocusChange",
+    "editor.selectionHighlight": false,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.occurrencesHighlight": "off",
+    "terminal.integrated.stickyScroll.enabled": false,
+
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["leader", "h"],
+            "commands": [
+                "editor.action.showHover"
+            ],
+            "silent": true
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": ["leader", "a"],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        }
+    ],
+    "editor.autoClosingBrackets": "never",
+    "explorer.confirmDragAndDrop": false,
+    "editor.tokenColorCustomizations": {
+        "[Gruvbox Dark Medium]": {
+            "comments": {
+                "fontStyle": ""
+            }
+        }
+    },
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "block",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block"
+}

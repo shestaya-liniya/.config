@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 vim.keymap.set("n", "<leader>w", vim.cmd.write)
 
@@ -11,9 +11,13 @@ vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
 -- exit insert mode on esc in terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { silent = true })
 
+-- diagnostic and code action
 vim.keymap.set("n", "<leader>d", function()
 	vim.diagnostic.open_float(0, { scope = "cursor" })
 end)
+vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, {
+    desc = "Code Action"
+})
 
 vim.keymap.set("n", "<leader>ff", function()
 	vim.cmd("Telescope find_files")
