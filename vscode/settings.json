@@ -33,83 +33,6 @@
     "git.openRepositoryInParentFolders": "always",
     "terminal.integrated.initialHint": false,
     "terminal.integrated.stickyScroll.enabled": false,
-    "vim.cursorStylePerMode.insert": "block",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.replace": "block",
-    "vim.cursorStylePerMode.visual": "block",
-    "vim.cursorStylePerMode.visualblock": "block",
-    "vim.cursorStylePerMode.visualline": "block",
-    "vim.leader": "<space>",
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "leader",
-                "h"
-            ],
-            "commands": [
-                "editor.action.showHover"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "a"
-            ],
-            "commands": [
-                "editor.action.quickFix"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "l"
-            ],
-            "commands": [
-                "editor.action.format"
-            ]
-        },
-        // Indent pasted content
-        {
-            "after": [
-                "`",
-                "[",
-                "V",
-                "`",
-                "]",
-                "k",
-                ">"
-            ],
-            "before": [
-                "leader",
-                "]"
-            ]
-        },
-        {
-            "after": [
-                "`",
-                "[",
-                "V",
-                "`",
-                "]",
-                "k",
-                "<"
-            ],
-            "before": [
-                "leader",
-                "["
-            ]
-        }
-    ],
     "window.commandCenter": false,
     "window.density.editorTabHeight": "compact",
     "window.density.layout": "compact",
@@ -126,5 +49,16 @@
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
     "workbench.tree.enableStickyScroll": false,
-    "workbench.tree.indent": 16
+    "workbench.tree.indent": 16,
+    "editor.linkedEditing": true,
+    "explorer.confirmDelete": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "Lua.diagnostics.workspaceEvent": "None",
+    "vscode-neovim.statusLineItems": [
+        "statusline",
+        "mode",
+        "cmd"
+    ],
 }

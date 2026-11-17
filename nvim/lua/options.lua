@@ -19,7 +19,7 @@ vim.opt.listchars = {
 }
 
 vim.api.nvim_set_hl(0, "Normal", {
-	bg = "#303030",
+	bg = "#282828",
 })
 
 opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
