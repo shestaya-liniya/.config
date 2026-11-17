@@ -3,11 +3,13 @@
     "chat.disableAIFeatures": true,
     "chat.titleBar.openInAgentsWindow.enabled": false,
     "chat.titleBar.signIn.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.autoClosingBrackets": "never",
     "editor.autoIndentOnPaste": true,
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "JetBrains Mono",
     "editor.formatOnPaste": true,
+    "editor.lightbulb.enabled": "off",
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": "off",
@@ -26,7 +28,9 @@
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
     "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
     "terminal.integrated.initialHint": false,
     "terminal.integrated.stickyScroll.enabled": false,
     "vim.cursorStylePerMode.insert": "block",
@@ -59,28 +63,19 @@
         {
             "before": [
                 "leader",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "leader",
                 "a"
             ],
             "commands": [
                 "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l"
+            ],
+            "commands": [
+                "editor.action.format"
             ]
         },
         // Indent pasted content
@@ -119,6 +114,8 @@
     "window.density.editorTabHeight": "compact",
     "window.density.layout": "compact",
     "window.title": "${rootPath} :)",
+    "workbench.activityBar.compact": true,
+    "workbench.activityBar.location": "bottom",
     "workbench.browser.showInTitleBar": false,
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.editor.enablePreview": false,
@@ -129,8 +126,5 @@
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
     "workbench.tree.enableStickyScroll": false,
-    "workbench.tree.indent": 16,
-    "workbench.activityBar.location": "bottom",
-    "workbench.activityBar.compact": true,
-    "git.autofetch": true
+    "workbench.tree.indent": 16
 }
