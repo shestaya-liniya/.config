@@ -2,6 +2,7 @@ local opt = vim.opt
 
 vim.cmd.colorscheme("retrobox")
 
+vim.cmd.syntax("off")
 opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true
@@ -25,6 +26,8 @@ vim.api.nvim_set_hl(0, "Normal", {
 opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
 opt.guicursor = "a:block"
 opt.numberwidth = 1
+
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 opt.undofile = true
 vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"

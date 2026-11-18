@@ -11,7 +11,15 @@ return {
 			}
 		})
 
-		vim.lsp.enable({ "tsc", "pyright", "bashls", "lua_ls", "cssls" })
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+		vim.lsp.config("html", {
+			filetypes = { "html", "javascriptreact", "typescriptreact" },
+			capabilities = capabilities
+		})
+
+		vim.lsp.enable({ "tsc", "pyright", "bashls", "lua_ls", "cssls", "eslint", "html", })
 
 		vim.api.nvim_create_autocmd('LspAttach', {
 			group = vim.api.nvim_create_augroup('my.lsp', {}),
@@ -19,7 +27,7 @@ return {
 				local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
 
 				if client:supports_method('textDocument/completion') then
-					vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = false })
+					vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
 					vim.keymap.set("i", "<C-space>", vim.lsp.completion.get, { desc = "trigger autocompletion" })
 				end
 				--[[

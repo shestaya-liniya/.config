@@ -1,5 +1,7 @@
 alias ls='ls -Ga'
 alias code='codium'
+alias source='source ~/.config/.bashrc'
+alias ts='tmux new-session -s $(basename ~$PWD)'
 
 # Colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;31m'
