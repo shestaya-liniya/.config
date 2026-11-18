@@ -1,5 +1,4 @@
 require("options")
 require("automations")
 require("remaps")
-require("scripts")
 require("lazy.init")
