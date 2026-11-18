@@ -59,25 +59,6 @@ else
 		vim.cmd("tabclose")
 	end)
 
-	-- Telescope
-	vim.keymap.set("n", "<leader>ff", function()
-		vim.cmd("Telescope find_files")
-	end)
-	vim.keymap.set("n", "<leader>fo", function()
-		vim.cmd("Telescope oldfiles")
-	end)
-	vim.keymap.set("n", "<leader>fs", function()
-		vim.cmd("Telescope live_grep")
-	end)
-
-	vim.keymap.set("n", "<leader>fb", function()
-		vim.cmd("Telescope buffers")
-	end)
-
-	vim.keymap.set("n", "<leader>fp", function()
-		vim.cmd("Telescope projects")
-	end)
-
 	vim.keymap.set("n", "<F2>", "<cmd>UndotreeToggle<CR>", {
 		desc = "Toggle UndoTree",
 	})
