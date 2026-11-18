@@ -1,9 +1,3 @@
--- enter insert mode on terminal enter
-vim.api.nvim_create_autocmd("TermOpen", {
-	pattern = "*",
-	command = "startinsert",
-})
-
 local autosave = vim.loop.new_timer()
 autosave:start(
 	3000,
