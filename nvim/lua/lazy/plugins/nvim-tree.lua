@@ -1,8 +1,5 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	dependencies = {
-		"https://github.com/nvim-tree/nvim-web-devicons"
-	},
 	config = function()
 		-- disable netrw at the very start of your init.lua
 		vim.g.loaded_netrw = 1
@@ -41,6 +38,5 @@ return {
 		vim.keymap.set("n", "<leader>e", function()
 			vim.cmd("NvimTreeToggle")
 		end)
-
 	end
 }

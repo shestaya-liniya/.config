@@ -25,7 +25,7 @@
                                         "optional": ["caps_lock"]
                                     }
                                 },
-                                "to": [{ "select_input_source": { "language": "^fr$" } }],
+                                "to": [{ "select_input_source": { "language": "^it$" } }],
                                 "type": "basic"
                             },
                             {

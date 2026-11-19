@@ -40,3 +40,6 @@ vim.diagnostic.config({
 })
 
 vim.cmd.packadd("nohlsearch")
+
+-- execute .nvim.lua in project
+vim.o.exrc = true
