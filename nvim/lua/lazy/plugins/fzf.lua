@@ -15,6 +15,7 @@ return {
 		vim.keymap.set("n", "<leader>ff", function() Fzf.files() end)
 		vim.keymap.set("n", "<leader>fs", function() Fzf.live_grep() end)
 		vim.keymap.set("n", "<leader>fo", function() Fzf.oldfiles() end)
+		vim.keymap.set("n", "<leader>fb", function() Fzf.buffers() end)
 
 		Fzf.setup({ defaults = { file_icons = false } })
 	end
