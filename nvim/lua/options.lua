@@ -1,8 +1,10 @@
 local opt = vim.opt
 
 vim.cmd.colorscheme("retrobox")
+vim.cmd.syntax("on")
+vim.cmd.packadd("nohlsearch")
 
-vim.cmd.syntax("off")
+-- options
 opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true
@@ -12,6 +14,21 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.smartindent = true
 opt.wrap = false
+
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+
+opt.undofile = true
+
+vim.diagnostic.config({
+	virtual_text = {
+		enabled = true,
+	},
+	underline = true,
+})
+
+opt.ignorecase = true
+
+-- visual
 opt.list = true
 vim.opt.listchars = {
 	tab = "| ",
@@ -27,19 +44,4 @@ opt.statuscolumn = "%=%l  " -- line number and two spaces after as margin
 opt.guicursor = "a:block"
 opt.numberwidth = 1
 
-vim.opt.completeopt = { "menu", "menuone", "noselect" }
-
-opt.undofile = true
-vim.g.netrw_bufsettings = "noma nomod nu rnu nowrap ro nobl"
-
-vim.diagnostic.config({
-	virtual_text = {
-		enabled = true,
-	},
-	underline = true,
-})
-
-vim.cmd.packadd("nohlsearch")
-
--- execute .nvim.lua in project
-vim.o.exrc = true
+vim.g.netrw_banner = 0

@@ -36,3 +36,5 @@ PATH="${PATH}:/opt/homebrew/bin"
 export PATH
 
 export MANPATH="/opt/homebrew/share/man:${MANPATH}"
+
+eval "$(fzf --bash)"
