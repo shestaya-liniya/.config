@@ -4,7 +4,7 @@ vim.cmd.colorscheme("retrobox")
 vim.cmd.syntax("on")
 vim.cmd.packadd("nohlsearch")
 
--- options
+-- OPTIONS
 opt.relativenumber = true
 opt.number = true
 opt.termguicolors = true
@@ -12,7 +12,7 @@ opt.termguicolors = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.smartindent = true
+
 opt.wrap = false
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
@@ -28,7 +28,10 @@ vim.diagnostic.config({
 
 opt.ignorecase = true
 
--- visual
+-- execute .nvim.lua in project
+vim.o.exrc = true
+
+-- VISUAL
 opt.list = true
 vim.opt.listchars = {
 	tab = "| ",

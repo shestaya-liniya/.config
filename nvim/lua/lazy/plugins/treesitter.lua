@@ -3,7 +3,8 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter").install({
+		local Ts = require("nvim-treesitter")
+		local langs = {
 			"python",
 			"bash",
 			"java",
@@ -13,19 +14,22 @@ return {
 			"javascript",
 			"html",
 			"css"
+		}
+
+		Ts.install(langs)
+
+		vim.api.nvim_create_autocmd('FileType', {
+		  pattern = langs,
+		  callback = function()
+			-- syntax highlighting, provided by Neovim
+			vim.treesitter.start()
+			-- folds, provided by Neovim
+			--vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+			--vim.wo.foldmethod = 'expr'
+			-- indentation, provided by nvim-treesitter
+			vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+		  end,
 		})
 
-		-- Function to request a parser for a buffer and if it exist turn on treesitter
-		-- source: https://github.com/tjdevries nvim config
-		vim.api.nvim_create_autocmd("FileType", {
-			callback = function(args)
-				local bufnr = args.buf
-				local ok, parser = pcall(vim.treesitter.get_parser, bufnr)
-				if not ok or not parser then
-					return
-				end
-				pcall(vim.treesitter.start)
-			end,
-		})
 	end,
 }
