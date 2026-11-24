@@ -2,6 +2,7 @@ local opt = vim.opt
 
 vim.cmd.colorscheme("retrobox")
 vim.cmd.syntax("on")
+
 vim.cmd.packadd("nohlsearch")
 
 -- OPTIONS

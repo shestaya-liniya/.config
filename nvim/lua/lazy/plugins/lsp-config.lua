@@ -1,6 +1,31 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
+		local lang_servers = {
+			"tsc",
+			"pyright",
+			"bashls",
+			"lua_ls",
+			"cssls",
+			"eslint",
+			"html"
+		}
+
+		-- CONFIGS
+
+		-- html config
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+		vim.lsp.config("html", {
+			--filetypes = { "html", "javascriptreact", "typescriptreact" },
+			filetypes = { "html" },
+			capabilities = capabilities
+		})
+
+		-- lua config
+
+		-- supress warning
 		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
@@ -11,15 +36,7 @@ return {
 			}
 		})
 
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-		vim.lsp.config("html", {
-			filetypes = { "html", "javascriptreact", "typescriptreact" },
-			capabilities = capabilities
-		})
-
-		vim.lsp.enable({ "tsc", "pyright", "bashls", "lua_ls", "cssls", "eslint", "html", })
+		vim.lsp.enable(lang_servers)
 
 		vim.api.nvim_create_autocmd('LspAttach', {
 			group = vim.api.nvim_create_augroup('my.lsp', {}),

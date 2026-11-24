@@ -20,4 +20,5 @@ end, { desc = "Lint" })
 
 vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
 
-vim.keymap.set("n", "<F2>", "<cmd>UndotreeToggle<CR>")
+-- exit terminal insert mode
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])

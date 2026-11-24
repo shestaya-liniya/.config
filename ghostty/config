@@ -14,3 +14,4 @@ cursor-color = white
 shell-integration-features = no-cursor
 cursor-style-blink = false
 
+font-feature=-calt, -liga, -dlig
