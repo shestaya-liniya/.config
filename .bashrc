@@ -1,17 +1,11 @@
+# ALIASES
+
+# General
 alias ls='ls -Ga'
 alias code='codium'
 alias source='source ~/.config/.bashrc'
-alias ts='tmux new-session -s $(basename ~$PWD)'
-alias trestore='~/.config/tmux/resurrect/scripts/restore.sh'
 
-# Colorize man pages
-export LESS_TERMCAP_mb=$'\e[1;31m'
-export LESS_TERMCAP_md=$'\e[1;36m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[1;40;33m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;32m'
-export LESS_TERMCAP_ue=$'\e[0m'
+alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/appletviewer"
 
 # Git Aliases
 alias nb='git checkout -b "$USER-$(date +%s)"' # new branch
@@ -30,8 +24,20 @@ alias gs='git status'
 alias gt='git tag'
 alias gu='git pull' # gu = git update
 
-alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/appletviewer"
+# Scripts
+alias tdir='~/.config/tmux/scripts/create-session-from-dir'
+alias trestore='~/.config/tmux/plugins/resurrect/scripts/restore.sh'
 
+# Colorize man pages
+export LESS_TERMCAP_mb=$'\e[1;31m'
+export LESS_TERMCAP_md=$'\e[1;36m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[1;40;33m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;32m'
+export LESS_TERMCAP_ue=$'\e[0m'
+
+# PATH
 PATH="${PATH}:/opt/homebrew/bin"
 export PATH
 
