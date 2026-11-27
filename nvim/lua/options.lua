@@ -13,6 +13,9 @@ opt.termguicolors = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
+opt.indentexpr = ""
+--opt.smartindent = true
+opt.autoindent = true
 
 opt.wrap = false
 
@@ -34,7 +37,7 @@ vim.o.exrc = true
 
 -- VISUAL
 opt.list = true
-vim.opt.listchars = {
+opt.listchars = {
 	tab = "| ",
 	leadmultispace = "| ",
 	space = "·",
